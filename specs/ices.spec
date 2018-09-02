@@ -8,7 +8,6 @@ URL:                    http://www.icecast.org
 Source0:                http://downloads.us.xiph.org/releases/ices/ices-%{version}.tar.bz2
 Source1:                ices.service
 Source2:                ices.logrotate
-Patch0:                 ices-2.0.1-noserial.patch
 BuildRequires:          gcc
 BuildRequires:          libxml2-devel, libshout-devel >= 2.0, libvorbis-devel,
 BuildRequires:          alsa-lib-devel, pkgconfig, zlib-devel, libogg-devel
@@ -32,7 +31,6 @@ could be used if certain conditions are met.
 
 %prep
 %setup -q
-%patch0 -p1 -b .noserial
 perl -pi -e 's|<background>0</background>|<background>1</background>|' conf/*.xml
 
 %build
@@ -99,6 +97,7 @@ fi
 
 %changelog
 * Sun Sep 02 2018 Kitsune Solar <kitsune.solar@gmail.com> - 2.0.2-1
+- Update to upstream release 2.0.2-1.
 - Build from EL7.
 
 * Fri Jul 13 2018 Fedora Release Engineering <releng@fedoraproject.org> - 2.0.1-26
