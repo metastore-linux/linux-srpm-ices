@@ -1,6 +1,6 @@
 Name:                   ices
-Version:                2.0.1
-Release:                26%{?dist}
+Version:                2.0.2
+Release:                1%{?dist}
 Summary:                Source streaming for Icecast
 Group:                  System Environment/Daemons
 License:                GPLv2
@@ -98,7 +98,7 @@ fi
 %attr(0755,root,ices) %{_var}/log/ices
 
 %changelog
-* Sun Sep 02 2018 Kitsune Solar <kitsune.solar@gmail.com> - 2.0.1-27
+* Sun Sep 02 2018 Kitsune Solar <kitsune.solar@gmail.com> - 2.0.2-1
 - Build from EL7.
 
 * Fri Jul 13 2018 Fedora Release Engineering <releng@fedoraproject.org> - 2.0.1-26
